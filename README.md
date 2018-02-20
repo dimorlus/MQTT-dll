@@ -12,47 +12,28 @@ Windows MQTT client for Borland C++ Builder
 	...
 
 	#if defined(__cplusplus)
-	
 		 extern "C" {
-	
 	#endif
-	
 	#if !defined(MQTTCLIENT_H)
-	
 	#define MQTTCLIENT_H 
-	
 	#if defined(__BORLANDC__)
-	
 	#pragma option push
-	
 	#pragma option -VC
-	
 	#define _CALL_ __stdcall
-	
 	#else
-	
 	#define _CALL_
-	
 	#endif 
-
-	
-	...
+...
 	
 	DLLExport int _CALL_ MQTTClient_setCallbacks(MQTTClient handle, void* context, MQTTClient_connectionLost* cl,
 	MQTTClient_messageArrived* ma, MQTTClient_deliveryComplete* dc);
 	...
 	 
 	#if defined(__BORLANDC__)
-	
 	#pragma option pop
-	
 	#endif
-	
 	#endif
-	
 	#ifdef __cplusplus
-	
 	}
-	
 	#endif 
 
